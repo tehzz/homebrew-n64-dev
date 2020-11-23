@@ -1,9 +1,9 @@
 class Mips64ElfBinutils < Formula
   desc "GNU binutils for N64 mip64-elf target"
-  homepage "https://gcc.gnu.org/"
-  url "https://ftp.gnu.org/gnu/binutils/binutils-2.34.tar.xz"
-  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.34.tar.xz" 
-  sha256 "f00b0e8803dc9bab1e2165bd568528135be734df3fabf8d0161828cd56028952"
+  homepage "https://www.gnu.org/software/binutils/"
+  url "https://ftp.gnu.org/gnu/binutils/binutils-2.35.1.tar.xz"
+  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.35.1.tar.xz" 
+  sha256 "3ced91db9bf01182b7e420eab68039f2083aed0a214c0424e257eae3ddee8607"
 
   depends_on "gettext"
   
@@ -58,6 +58,10 @@ class Mips64ElfBinutils < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "#{bin}/mips64-elf-ar", "--version"
+    system "#{bin}/mips64-elf-as", "--version"
+    system "#{bin}/mips64-elf-ld", "--version"
+    system "#{bin}/mips64-elf-objcopy", "--version"
+    system "#{bin}/mips64-elf-objdump", "--version"
   end
 end

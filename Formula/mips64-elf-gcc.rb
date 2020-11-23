@@ -4,9 +4,9 @@
 class Mips64ElfGcc < Formula
   desc "GNU GCC C toolchain for N64 mips64-elf target"
   homepage "https://gcc.gnu.org/"
-  url "https://ftp.gnu.org/gnu/gcc/gcc-10.1.0/gcc-10.1.0.tar.xz"
-  mirror "https://mirror.clarkson.edu/gnu/gcc/gcc-10.1.0/gcc-10.1.0.tar.xz" 
-  sha256 "b6898a23844b656f1b68691c5c012036c2e694ac4b53a8918d4712ad876e7ea2"
+  url "https://ftp.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.xz"
+  mirror "https://ftpmirror.gnu.org/gnu/gcc/gcc-10.2.0/gcc-10.2.0.tar.xz" 
+  sha256 "b8dd4368bb9c7f0b98188317ee0254dd8cc99d1e3a18d0ff146c855fe16c1d8c"
 
   depends_on "gmp"
   depends_on "isl"
@@ -98,6 +98,6 @@ class Mips64ElfGcc < Formula
     #
     # The installed folder is not in the path, so use the entire path to any
     # executables being tested: `system "#{bin}/program", "do", "something"`.
-    system "false"
+    system "#{bin}/mips64-elf-gcc", "--version"
   end
 end
