@@ -4,6 +4,7 @@
 
 * `mips64-elf-binutils`
 * `mips64-elf-gcc`
+* `qemu-irix`
 
 ## How do I install these formulae?
 `brew tap tehzz/n64-dev` and then `brew install <formula>`.
