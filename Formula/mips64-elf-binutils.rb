@@ -1,9 +1,9 @@
 class Mips64ElfBinutils < Formula
-  desc "GNU binutils for N64 mip64-elf target"
+  desc "GNU binutils for the N64 mip64-elf target"
   homepage "https://www.gnu.org/software/binutils/"
-  url "https://ftp.gnu.org/gnu/binutils/binutils-2.35.1.tar.xz"
-  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.35.1.tar.xz" 
-  sha256 "3ced91db9bf01182b7e420eab68039f2083aed0a214c0424e257eae3ddee8607"
+  url "https://ftp.gnu.org/gnu/binutils/binutils-2.37tar.xz"
+  mirror "https://ftpmirror.gnu.org/binutils/binutils-2.37.tar.xz" 
+  sha256 "820d9724f020a3e69cb337893a0b63c2db161dadcb0e06fc11dc29eb1e84a32c"
 
   depends_on "gettext"
   
@@ -24,9 +24,10 @@ class Mips64ElfBinutils < Formula
       --disable-dependency-tracking
       --disable-silent-rules
       --prefix=#{prefix}
-      --infodir=#{info}
-      --mandir=#{man}
+      --includedir=#{include}/mip64-elf-binutils/#{version_suffix}
+      --infodir=#{info}/mip64-elf-binutils/#{version_suffix}
       --libdir=#{lib}/mip64-elf-binutils/#{version_suffix}
+      --mandir=#{man}/mip64-elf-binutils/#{version_suffix}
       --target=mips64-elf
       --with-arch=vr4300
       --enable-64-bit-bfd
