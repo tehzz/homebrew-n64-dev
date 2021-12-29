@@ -4,6 +4,7 @@
 
 * `mips64-elf-binutils`
 * `mips64-elf-gcc`
+* `mips-linux-gnu-gcc`
 * `qemu-irix`
 
 ## How do I install these formulae?
